@@ -46,4 +46,9 @@ tag1.tag2~value  ---   cool   (Tag1 have child tag2 and tag2 have attribute valu
 tag1.tag3~msg --  good  (Tag1 have child tag3 and tag3 have attribute msg)
 tag1~name --- aakash (Tag1 have attribute name)
 
+3) How to run Program?
+
+Just type "python parse.py" on your shell, condition python must be installed on your machine. NO Extra Library Required.
+I tested on Python2.7.
+
  
