@@ -1,0 +1,49 @@
+1) Objective : To parse the HML (Human defined Markup Language)
+
+2) HML have some defined format and user can enter the query in some defined format too.
+Structure of HML & Query is defined as follows:
+
+Input: 
+------
+
+8 4   
+<tag1 name = "aakash">
+<tag2 value = "cool">
+<tag4 game = "on">
+</tag4>
+</tag2>
+<tag3 msg = "good">
+</tag3>
+</tag1>
+tag1.tag2~name
+tag1.tag2~value
+tag1.tag3~msg
+tag1~name
+
+Output: 
+---------
+Not Found!
+cool
+good
+aakash
+
+Explaining Syntax....
+----------------------------
+
+
+# 8 - No of lines containing HML.
+# 5 - No of lines containing User Query.
+Query Format:
+# Two tags are separted by Dot "." only if they have parent child relationship Like tag1.tag2 (tag1 is Parent of Tag2).
+# Tag and its Attribute are delimited by Tilde "~".
+
+
+Explaining Output:
+---------------------------
+
+tag1.tag2~name   --  Not Found! (As there is no Tag2 containing name as attribute) 
+tag1.tag2~value  ---   cool   (Tag1 have child tag2 and tag2 have attribute value)
+tag1.tag3~msg --  good  (Tag1 have child tag3 and tag3 have attribute msg)
+tag1~name --- aakash (Tag1 have attribute name)
+
+ 
